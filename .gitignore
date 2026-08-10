@@ -1,0 +1,12 @@
+# Binários compilados (C, C++, C#)
+c/conversor
+c/palindromo
+cpp/conversor
+cpp/palindromo
+csharp/*.exe
+
+# Bytecode compilado (Java)
+java/*.class
+
+# Diversos
+.DS_Store
