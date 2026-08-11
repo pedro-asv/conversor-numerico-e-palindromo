@@ -1,21 +1,9 @@
-/**
- * palindromo.js — Verifica se uma frase ou palavra é um palíndromo.
- *
- * Ignora maiúsculas/minúsculas, espaços e pontuação.
- *
- * Uso:
- *   node palindromo.js "Arara"
- *   node palindromo.js "A base do teto desaba"
- */
-
 function normalizar(texto) {
     return texto.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 function ehPalindromo(texto) {
     const normalizado = normalizar(texto);
-    // JavaScript não tem um jeito nativo de inverter string —
-    // por isso o split/reverse/join, diferente do [::-1] do Python
     const invertido = normalizado.split("").reverse().join("");
     return normalizado === invertido;
 }

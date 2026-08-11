@@ -1,11 +1,3 @@
-/**
- * Palindromo.java — Verifica se uma frase ou palavra é um palíndromo.
- *
- * Compilar: javac Palindromo.java
- * Uso:      java Palindromo "Arara"
- *           java Palindromo "A base do teto desaba"
- */
-
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
@@ -28,8 +20,6 @@ public class Palindromo {
     }
 
     public static void main(String[] args) {
-        // Força saída em UTF-8 — sem isso, acentos aparecem corrompidos em
-        // terminais/sistemas que não usam UTF-8 por padrão (comum no Windows)
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         if (args.length != 1) {

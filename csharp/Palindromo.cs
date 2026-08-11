@@ -1,9 +1,3 @@
-// Palindromo.cs — Verifica se uma frase ou palavra é um palíndromo.
-//
-// Compilar: mcs Palindromo.cs
-// Uso:      mono Palindromo.exe "Arara"
-//           mono Palindromo.exe "A base do teto desaba"
-
 using System;
 using System.Linq;
 
@@ -25,9 +19,7 @@ class Palindromo
 
     static void Main(string[] args)
     {
-        // Força saída em UTF-8 — sem isso, acentos aparecem corrompidos em
-        // terminais que não usam UTF-8 por padrão (comum no Prompt de Comando do Windows)
-        Console.OutputEncoding = new System.Text.UTF8Encoding(false); // false = sem BOM
+        Console.OutputEncoding = new System.Text.UTF8Encoding(false);
 
         if (args.Length != 1)
         {

@@ -1,11 +1,3 @@
-/**
- * palindromo.cpp — Verifica se uma frase ou palavra é um palíndromo.
- *
- * Compilar: g++ -o palindromo palindromo.cpp
- * Uso:      ./palindromo "Arara"
- *           ./palindromo "A base do teto desaba"
- */
-
 #include <iostream>
 #include <string>
 #include <algorithm>

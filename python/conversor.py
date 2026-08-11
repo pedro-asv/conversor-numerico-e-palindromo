@@ -1,28 +1,15 @@
-"""
-conversor.py — Converte um número hexadecimal para decimal, binário e octal.
-
-Uso:
-    python3 conversor.py <hexadecimal>
-    python3 conversor.py 1A3F
-    python3 conversor.py 0x1A3F
-"""
-
 import sys
 
 
 def converter_hex(valor_hex: str) -> dict:
-    """Recebe uma string hexadecimal (com ou sem prefixo 0x) e retorna
-    um dicionário com as representações em decimal, binário e octal."""
     valor_hex = valor_hex.strip().lower().removeprefix("0x")
 
-    # int(x, 16) faz o Python interpretar a string como base 16 —
-    # lança ValueError automaticamente se algum caractere não for hexadecimal válido
     numero_decimal = int(valor_hex, 16)
 
     return {
         "decimal": numero_decimal,
-        "binario": bin(numero_decimal)[2:],   # remove o prefixo "0b"
-        "octal": oct(numero_decimal)[2:],     # remove o prefixo "0o"
+        "binario": bin(numero_decimal)[2:],
+        "octal": oct(numero_decimal)[2:],
     }
 
 

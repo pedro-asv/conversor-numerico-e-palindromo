@@ -1,9 +1,3 @@
-// Conversor.cs — Converte um número hexadecimal para decimal, binário e octal.
-//
-// Compilar: mcs Conversor.cs   (ou: csc Conversor.cs, se usar o SDK oficial da Microsoft)
-// Uso:      mono Conversor.exe <hexadecimal>
-//           mono Conversor.exe 1A3F
-
 using System;
 
 class Conversor
@@ -22,9 +16,7 @@ class Conversor
 
     static void Main(string[] args)
     {
-        // Força saída em UTF-8 — sem isso, acentos aparecem corrompidos em
-        // terminais que não usam UTF-8 por padrão (comum no Prompt de Comando do Windows)
-        Console.OutputEncoding = new System.Text.UTF8Encoding(false); // false = sem BOM
+        Console.OutputEncoding = new System.Text.UTF8Encoding(false);
 
         if (args.Length != 1)
         {
@@ -42,8 +34,6 @@ class Conversor
         long numeroDecimal;
         try
         {
-            // Convert.ToInt64 com base 16 lança FormatException se algum
-            // caractere não for hexadecimal válido — parecido com o Python
             numeroDecimal = Convert.ToInt64(valorHex, 16);
         }
         catch (FormatException)

@@ -1,19 +1,8 @@
-/**
- * conversor.js — Converte um número hexadecimal para decimal, binário e octal.
- *
- * Uso:
- *   node conversor.js <hexadecimal>
- *   node conversor.js 1A3F
- *   node conversor.js 0x1A3F
- */
-
 function converterHex(valorHex) {
     valorHex = valorHex.trim().toLowerCase().replace(/^0x/, "");
 
     const numeroDecimal = parseInt(valorHex, 16);
 
-    // parseInt não lança erro para entrada inválida — ele retorna NaN,
-    // então precisamos checar isso manualmente (diferente do Python, que lança exceção)
     if (Number.isNaN(numeroDecimal)) {
         throw new Error(`'${valorHex}' não é um hexadecimal válido.`);
     }

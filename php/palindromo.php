@@ -1,14 +1,4 @@
 <?php
-/**
- * palindromo.php — Verifica se uma frase ou palavra é um palíndromo.
- *
- * Ignora maiúsculas/minúsculas, espaços e pontuação.
- *
- * Uso:
- *   php palindromo.php "Arara"
- *   php palindromo.php "A base do teto desaba"
- */
-
 function normalizar(string $texto): string
 {
     return preg_replace('/[^a-z0-9]/', '', strtolower($texto));

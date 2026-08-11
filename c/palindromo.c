@@ -1,21 +1,9 @@
-/**
- * palindromo.c — Verifica se uma frase ou palavra é um palíndromo.
- *
- * Compilar: gcc -o palindromo palindromo.c
- * Uso:      ./palindromo "Arara"
- *           ./palindromo "A base do teto desaba"
- */
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 #define TAMANHO_BUFFER 256
 
-/* Recebe o texto original e escreve a versão normalizada (só letras/números,
- * minúsculo) em 'saida'. Em C precisamos passar o buffer de destino como
- * parâmetro, porque a função não pode simplesmente "retornar uma string nova"
- * do jeito fácil que Python/JS fazem. */
 void normalizar(const char *texto, char *saida)
 {
     int j = 0;

@@ -1,13 +1,5 @@
--- palindromo.lua — Verifica se uma frase ou palavra é um palíndromo.
---
--- Uso:
---   lua5.4 palindromo.lua "Arara"
---   lua5.4 palindromo.lua "A base do teto desaba"
-
 local function normalizar(texto)
     texto = texto:lower()
-    -- gsub com o padrão "%a%d" mantém só letras e números (sintaxe de
-    -- padrão do Lua, parecida com regex mas com sintaxe própria)
     local normalizado = texto:gsub("[^%a%d]", "")
     return normalizado
 end

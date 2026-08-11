@@ -1,12 +1,3 @@
-/**
- * conversor.cpp — Converte um número hexadecimal para decimal, binário e octal.
- *
- * Compilar: g++ -o conversor conversor.cpp
- * Uso:      ./conversor <hexadecimal>
- *           ./conversor 1A3F
- *           ./conversor 0x1A3F
- */
-
 #include <iostream>
 #include <string>
 #include <bitset>
@@ -34,15 +25,11 @@ bool ehHexValido(const std::string &valor)
     return true;
 }
 
-// Converte manualmente pra binário, dígito a dígito — diferente das outras
-// linguagens, que têm função pronta pra isso. Em C++, o jeito mais didático
-// costuma ser via bitset (usado abaixo) já que não existe um "toString(base)" nativo.
 std::string paraBinario(unsigned long numero)
 {
     if (numero == 0)
         return "0";
     std::string binario = std::bitset<32>(numero).to_string();
-    // remove os zeros à esquerda que sobram do bitset de 32 bits
     size_t primeiroUm = binario.find('1');
     return binario.substr(primeiroUm);
 }

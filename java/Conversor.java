@@ -1,25 +1,13 @@
-/**
- * Conversor.java — Converte um número hexadecimal para decimal, binário e octal.
- *
- * Compilar: javac Conversor.java
- * Uso:      java Conversor <hexadecimal>
- *           java Conversor 1A3F
- */
-
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
 public class Conversor {
 
     static long converterParaDecimal(String valorHex) {
-        // Long.parseLong com base 16 lança NumberFormatException se
-        // algum caractere não for hexadecimal válido
         return Long.parseLong(valorHex, 16);
     }
 
     public static void main(String[] args) {
-        // Força saída em UTF-8 — sem isso, acentos aparecem corrompidos em
-        // terminais/sistemas que não usam UTF-8 por padrão (comum no Windows)
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         if (args.length != 1) {
